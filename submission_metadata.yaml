@@ -1,0 +1,52 @@
+team_name: "Machine Mechanics"
+
+primary_contact:
+  name: "Shokhee Gupta"
+  email: "shokheegupta26303.dpsk@gmail.com"
+  phone: "+91-9690767391"
+
+team_members:
+  - name: "Shokhee Gupta"
+    email: "shokheegupta26303.dpsk@gmail.com"
+    role: "ML Engineer"
+  - name: "Jahanvi Dixit"
+    email: "JAHANVI_EMAIL_HERE"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/Shokhee22/redrob-candidate-ranking"
+sandbox_link: "https://huggingface.co/spaces/Shokhee22/redrob-ranker"
+reproduce_command: "python src/rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Google Colab"
+  cpu_cores: 2
+  ram_gb: 12
+  python_version: "3.12"
+  os: "Ubuntu 22.04"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude as a coding assistant and tutor throughout development.
+  All engineering decisions and design choices were made by the team.
+  No candidate data was fed to any external LLM.
+
+methodology_summary: |
+  Hybrid ranker with five scoring components: semantic career history
+  match (35%), trust-weighted skill scoring (25%), title tier (20%),
+  experience fit (15%), education (5%). Multiplied by behavioral signal
+  modifier using open_to_work, github_activity, recruiter_response_rate,
+  last_active_date, interview_completion_rate. Honeypot detection via
+  consistency checks. Model: all-MiniLM-L6-v2. Runtime under 5 minutes.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
