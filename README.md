@@ -67,3 +67,4 @@ Runs in under 5 minutes on CPU with 16GB RAM. No network calls during ranking.
 - src/scoring_utils.py — Reusable scoring functions
 - requirements.txt — Python dependencies
 - output/submission.csv — Final ranked top 100
+- https://huggingface.co/spaces/Shokhee22/redrob-ranker 
